@@ -18,7 +18,7 @@ dependencies:
 
 You can install packages from the command line:
 
-with Flutter:
+with Flutter v3.3.10
 
 ```
 $ flutter pub get
