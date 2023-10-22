@@ -2,14 +2,14 @@ group 'com.example.qrcode'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.6.20'
+    ext.kotlin_version = '1.8.22'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -23,7 +23,6 @@ rootProject.allprojects {
 
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 ext {
@@ -32,8 +31,11 @@ ext {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdk 33
 
+    buildFeatures {
+        viewBinding true
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
