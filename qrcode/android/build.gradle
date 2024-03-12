@@ -2,7 +2,7 @@ group 'com.example.qrcode'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.8.22'
+    ext.kotlin_version = '1.9.22'
     repositories {
         google()
         jcenter()
@@ -31,7 +31,7 @@ ext {
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     buildFeatures {
         viewBinding true
@@ -40,7 +40,7 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     lintOptions {
